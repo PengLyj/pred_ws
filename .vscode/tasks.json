@@ -1,0 +1,20 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "catkin_make",
+			"label": "test",
+			"args": [
+				"--directory",	//跟着后续的路径
+				"/home/plyj/20240103foshan/pred_ws",
+				// "-DCMAKE_BUILD_TYPE=Debug",
+				"-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+			],
+			"problemMatcher": [
+				"$catkin-gcc"
+			],
+			"group": "build"
+
+		}
+	]
+}

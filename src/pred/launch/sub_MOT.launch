@@ -1,0 +1,4 @@
+<launch>
+    <node name="sub_MOT" pkg="pred" type="sub_MOT" output="screen"/>
+</launch>
+
