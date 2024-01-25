@@ -1,6 +1,8 @@
 # include "pred_utils.h"
 # include "ros/ros.h"
 # include <iostream>
+#include "custom_msgs/DetectedObject.h"
+#include "custom_msgs/DetectedObjectArray.h"
 
 //打印每帧数据对应时间
 void printTimestamp(const std_msgs::Header& header) {
@@ -37,4 +39,25 @@ void processMsg(const custom_msgs::MOT& one_frame_msg, std::map<int, std::vector
 
         }
     }
+}
+
+//处理8帧数据为id,vector<x,y,timestamp>格式
+void processMsg2(const custom_msgs::DetectedObjectArray& one_frame_msg, std::map<int, std::vector<std::pair<std::pair<float, float>, ros::Time>>>& bank){
+    int num_obj = 0 ;
+    for (const auto& item : one_frame_msg.objects) {    // 该帧的单个目标
+        ros::Time timestamp = one_frame_msg.header.stamp;
+
+        std::vector<float> person;
+        float x = item.pose.position.x; //  x
+        float y = item.pose.position.x; //  y
+        int id = item.id; //  id
+
+        if (bank.find(id) != bank.end()) {
+            bank[id].push_back({{x, y}, timestamp});
+        } else {
+            bank[id] = {{{x, y}, timestamp}};
+        }
+        num_obj++;
+    }
+    std::cout << "包含" << num_obj << " 个目标"<< std::endl;
 }

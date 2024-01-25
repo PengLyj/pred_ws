@@ -8,7 +8,7 @@
         {
             "name": "ROS: Launch",
             "request": "launch",
-            "target": "/home/plyj/20240103foshan/pred_ws/src/pred/launch/sub_MOT.launch",
+            "target": "/home/plyj/20240103foshan/pred_ws/src/pred/launch/sub_MOT2.launch",
             "launch": [
                 // "/home/plyj/20240103foshan/pred_ws/src/pred/launch/pub_MOT.launch"
                 // "rviz",

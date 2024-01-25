@@ -54,25 +54,54 @@ CMAKE_BINARY_DIR = /home/plyj/20240103foshan/pred_ws/build
 include custom_msgs/CMakeFiles/custom_msgs_generate_messages_py.dir/progress.make
 
 custom_msgs/CMakeFiles/custom_msgs_generate_messages_py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_MOT.py
+custom_msgs/CMakeFiles/custom_msgs_generate_messages_py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py
+custom_msgs/CMakeFiles/custom_msgs_generate_messages_py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py
 custom_msgs/CMakeFiles/custom_msgs_generate_messages_py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/__init__.py
 
 
 /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_MOT.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_MOT.py: /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg
 /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_MOT.py: /opt/ros/noetic/share/std_msgs/msg/MultiArrayDimension.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_MOT.py: /opt/ros/noetic/share/std_msgs/msg/Float32MultiArray.msg
 /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_MOT.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_MOT.py: /opt/ros/noetic/share/std_msgs/msg/MultiArrayLayout.msg
-/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_MOT.py: /opt/ros/noetic/share/std_msgs/msg/Float32MultiArray.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/plyj/20240103foshan/pred_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG custom_msgs/MOT"
-	cd /home/plyj/20240103foshan/pred_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg -Icustom_msgs:/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg
+	cd /home/plyj/20240103foshan/pred_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg -Icustom_msgs:/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Ijsk_recognition_msgs:/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Ipcl_msgs:/opt/ros/noetic/share/pcl_msgs/cmake/../msg -Ijsk_footstep_msgs:/opt/ros/noetic/share/jsk_footstep_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p custom_msgs -o /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg
+
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py: /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py: /opt/ros/noetic/share/jsk_recognition_msgs/msg/BoundingBox.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/plyj/20240103foshan/pred_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG custom_msgs/DetectedObject"
+	cd /home/plyj/20240103foshan/pred_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg -Icustom_msgs:/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Ijsk_recognition_msgs:/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Ipcl_msgs:/opt/ros/noetic/share/pcl_msgs/cmake/../msg -Ijsk_footstep_msgs:/opt/ros/noetic/share/jsk_footstep_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p custom_msgs -o /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg
+
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py: /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py: /opt/ros/noetic/share/jsk_recognition_msgs/msg/BoundingBox.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py: /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/plyj/20240103foshan/pred_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG custom_msgs/DetectedObjectArray"
+	cd /home/plyj/20240103foshan/pred_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg -Icustom_msgs:/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Ijsk_recognition_msgs:/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Ipcl_msgs:/opt/ros/noetic/share/pcl_msgs/cmake/../msg -Ijsk_footstep_msgs:/opt/ros/noetic/share/jsk_footstep_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p custom_msgs -o /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg
 
 /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/__init__.py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_MOT.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/plyj/20240103foshan/pred_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for custom_msgs"
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/__init__.py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py
+/home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/__init__.py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/plyj/20240103foshan/pred_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for custom_msgs"
 	cd /home/plyj/20240103foshan/pred_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg --initpy
 
 custom_msgs_generate_messages_py: custom_msgs/CMakeFiles/custom_msgs_generate_messages_py
 custom_msgs_generate_messages_py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_MOT.py
+custom_msgs_generate_messages_py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObject.py
+custom_msgs_generate_messages_py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/_DetectedObjectArray.py
 custom_msgs_generate_messages_py: /home/plyj/20240103foshan/pred_ws/devel/lib/python3/dist-packages/custom_msgs/msg/__init__.py
 custom_msgs_generate_messages_py: custom_msgs/CMakeFiles/custom_msgs_generate_messages_py.dir/build.make
 

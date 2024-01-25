@@ -54,20 +54,49 @@ CMAKE_BINARY_DIR = /home/plyj/20240103foshan/pred_ws/build
 include custom_msgs/CMakeFiles/custom_msgs_generate_messages_cpp.dir/progress.make
 
 custom_msgs/CMakeFiles/custom_msgs_generate_messages_cpp: /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/MOT.h
+custom_msgs/CMakeFiles/custom_msgs_generate_messages_cpp: /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h
+custom_msgs/CMakeFiles/custom_msgs_generate_messages_cpp: /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h
 
 
 /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/MOT.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/MOT.h: /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg
 /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/MOT.h: /opt/ros/noetic/share/std_msgs/msg/MultiArrayDimension.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/MOT.h: /opt/ros/noetic/share/std_msgs/msg/Float32MultiArray.msg
 /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/MOT.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/MOT.h: /opt/ros/noetic/share/std_msgs/msg/MultiArrayLayout.msg
-/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/MOT.h: /opt/ros/noetic/share/std_msgs/msg/Float32MultiArray.msg
 /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/MOT.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/plyj/20240103foshan/pred_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from custom_msgs/MOT.msg"
-	cd /home/plyj/20240103foshan/pred_ws/src/custom_msgs && /home/plyj/20240103foshan/pred_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg -Icustom_msgs:/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+	cd /home/plyj/20240103foshan/pred_ws/src/custom_msgs && /home/plyj/20240103foshan/pred_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg -Icustom_msgs:/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Ijsk_recognition_msgs:/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Ipcl_msgs:/opt/ros/noetic/share/pcl_msgs/cmake/../msg -Ijsk_footstep_msgs:/opt/ros/noetic/share/jsk_footstep_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p custom_msgs -o /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h: /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h: /opt/ros/noetic/share/jsk_recognition_msgs/msg/BoundingBox.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/plyj/20240103foshan/pred_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from custom_msgs/DetectedObject.msg"
+	cd /home/plyj/20240103foshan/pred_ws/src/custom_msgs && /home/plyj/20240103foshan/pred_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg -Icustom_msgs:/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Ijsk_recognition_msgs:/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Ipcl_msgs:/opt/ros/noetic/share/pcl_msgs/cmake/../msg -Ijsk_footstep_msgs:/opt/ros/noetic/share/jsk_footstep_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p custom_msgs -o /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h: /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h: /opt/ros/noetic/share/jsk_recognition_msgs/msg/BoundingBox.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h: /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/plyj/20240103foshan/pred_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from custom_msgs/DetectedObjectArray.msg"
+	cd /home/plyj/20240103foshan/pred_ws/src/custom_msgs && /home/plyj/20240103foshan/pred_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg -Icustom_msgs:/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Ijsk_recognition_msgs:/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Ipcl_msgs:/opt/ros/noetic/share/pcl_msgs/cmake/../msg -Ijsk_footstep_msgs:/opt/ros/noetic/share/jsk_footstep_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p custom_msgs -o /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 custom_msgs_generate_messages_cpp: custom_msgs/CMakeFiles/custom_msgs_generate_messages_cpp
 custom_msgs_generate_messages_cpp: /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/MOT.h
+custom_msgs_generate_messages_cpp: /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObject.h
+custom_msgs_generate_messages_cpp: /home/plyj/20240103foshan/pred_ws/devel/include/custom_msgs/DetectedObjectArray.h
 custom_msgs_generate_messages_cpp: custom_msgs/CMakeFiles/custom_msgs_generate_messages_cpp.dir/build.make
 
 .PHONY : custom_msgs_generate_messages_cpp

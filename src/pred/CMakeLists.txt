@@ -21,7 +21,7 @@ catkin_package(
 
 
 # set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)  # ${PROJECT_SOURCE_DIR}为/home/plyj/20240103foshan/pred_ws/src/pred
-add_library(pred_utils SHARED src/pred_utils.cpp) # 但是catkinmalke会将生成的库加入到devel/lib下面
+add_library(pred_utils SHARED src/pred_utils.cpp src/model_CVM.cpp) # 但是catkinmalke会将生成的库加入到devel/lib下面
 ###########
 ## Build ##
 ###########
@@ -36,9 +36,12 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/devel/lib/)
 
 add_executable(pub_MOT src/pub_MOT.cpp)
 add_executable(sub_MOT src/sub_MOT.cpp)
+add_executable(sub_MOT2 src/sub_MOT2.cpp)
 
 
 target_link_libraries(pub_MOT  ${catkin_LIBRARIES})
 target_link_libraries(sub_MOT  ${catkin_LIBRARIES})
+target_link_libraries(sub_MOT2  ${catkin_LIBRARIES})
 target_link_libraries(sub_MOT  pred_utils)
+target_link_libraries(sub_MOT2  pred_utils)
 

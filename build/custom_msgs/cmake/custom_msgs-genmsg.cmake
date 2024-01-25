@@ -1,8 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "custom_msgs: 1 messages, 0 services")
+message(STATUS "custom_msgs: 3 messages, 0 services")
 
-set(MSG_I_FLAGS "-Icustom_msgs:/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Icustom_msgs:/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Ijsk_recognition_msgs:/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Ipcl_msgs:/opt/ros/noetic/share/pcl_msgs/cmake/../msg;-Ijsk_footstep_msgs:/opt/ros/noetic/share/jsk_footstep_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -19,7 +19,17 @@ add_custom_target(custom_msgs_generate_messages ALL)
 
 get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg" NAME_WE)
 add_custom_target(_custom_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "custom_msgs" "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg" "std_msgs/MultiArrayDimension:std_msgs/Header:std_msgs/MultiArrayLayout:std_msgs/Float32MultiArray"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "custom_msgs" "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg" "std_msgs/MultiArrayDimension:std_msgs/Float32MultiArray:std_msgs/Header:std_msgs/MultiArrayLayout"
+)
+
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg" NAME_WE)
+add_custom_target(_custom_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "custom_msgs" "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg" "geometry_msgs/Pose:std_msgs/Header:geometry_msgs/Point:jsk_recognition_msgs/BoundingBox:geometry_msgs/Vector3:geometry_msgs/Quaternion"
+)
+
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg" NAME_WE)
+add_custom_target(_custom_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "custom_msgs" "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg" "geometry_msgs/Pose:std_msgs/Header:geometry_msgs/Point:jsk_recognition_msgs/BoundingBox:custom_msgs/DetectedObject:geometry_msgs/Vector3:geometry_msgs/Quaternion"
 )
 
 #
@@ -31,7 +41,19 @@ add_custom_target(_custom_msgs_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(custom_msgs
   "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayDimension.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayLayout.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float32MultiArray.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayDimension.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float32MultiArray.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayLayout.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/custom_msgs
+)
+_generate_msg_cpp(custom_msgs
+  "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg/BoundingBox.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/custom_msgs
+)
+_generate_msg_cpp(custom_msgs
+  "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg/BoundingBox.msg;/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/custom_msgs
 )
 
@@ -51,6 +73,10 @@ add_dependencies(custom_msgs_generate_messages custom_msgs_generate_messages_cpp
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_cpp _custom_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg" NAME_WE)
+add_dependencies(custom_msgs_generate_messages_cpp _custom_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg" NAME_WE)
+add_dependencies(custom_msgs_generate_messages_cpp _custom_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(custom_msgs_gencpp)
@@ -64,7 +90,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS custom_msgs_generate_messages_cpp)
 _generate_msg_eus(custom_msgs
   "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayDimension.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayLayout.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float32MultiArray.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayDimension.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float32MultiArray.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayLayout.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/custom_msgs
+)
+_generate_msg_eus(custom_msgs
+  "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg/BoundingBox.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/custom_msgs
+)
+_generate_msg_eus(custom_msgs
+  "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg/BoundingBox.msg;/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/custom_msgs
 )
 
@@ -84,6 +122,10 @@ add_dependencies(custom_msgs_generate_messages custom_msgs_generate_messages_eus
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_eus _custom_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg" NAME_WE)
+add_dependencies(custom_msgs_generate_messages_eus _custom_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg" NAME_WE)
+add_dependencies(custom_msgs_generate_messages_eus _custom_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(custom_msgs_geneus)
@@ -97,7 +139,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS custom_msgs_generate_messages_eus)
 _generate_msg_lisp(custom_msgs
   "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayDimension.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayLayout.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float32MultiArray.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayDimension.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float32MultiArray.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayLayout.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/custom_msgs
+)
+_generate_msg_lisp(custom_msgs
+  "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg/BoundingBox.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/custom_msgs
+)
+_generate_msg_lisp(custom_msgs
+  "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg/BoundingBox.msg;/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/custom_msgs
 )
 
@@ -117,6 +171,10 @@ add_dependencies(custom_msgs_generate_messages custom_msgs_generate_messages_lis
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_lisp _custom_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg" NAME_WE)
+add_dependencies(custom_msgs_generate_messages_lisp _custom_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg" NAME_WE)
+add_dependencies(custom_msgs_generate_messages_lisp _custom_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(custom_msgs_genlisp)
@@ -130,7 +188,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS custom_msgs_generate_messages_lisp)
 _generate_msg_nodejs(custom_msgs
   "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayDimension.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayLayout.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float32MultiArray.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayDimension.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float32MultiArray.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayLayout.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/custom_msgs
+)
+_generate_msg_nodejs(custom_msgs
+  "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg/BoundingBox.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/custom_msgs
+)
+_generate_msg_nodejs(custom_msgs
+  "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg/BoundingBox.msg;/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/custom_msgs
 )
 
@@ -150,6 +220,10 @@ add_dependencies(custom_msgs_generate_messages custom_msgs_generate_messages_nod
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_nodejs _custom_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg" NAME_WE)
+add_dependencies(custom_msgs_generate_messages_nodejs _custom_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg" NAME_WE)
+add_dependencies(custom_msgs_generate_messages_nodejs _custom_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(custom_msgs_gennodejs)
@@ -163,7 +237,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS custom_msgs_generate_messages_nodej
 _generate_msg_py(custom_msgs
   "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayDimension.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayLayout.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float32MultiArray.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayDimension.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float32MultiArray.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/MultiArrayLayout.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/custom_msgs
+)
+_generate_msg_py(custom_msgs
+  "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg/BoundingBox.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/custom_msgs
+)
+_generate_msg_py(custom_msgs
+  "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/jsk_recognition_msgs/cmake/../msg/BoundingBox.msg;/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/custom_msgs
 )
 
@@ -183,6 +269,10 @@ add_dependencies(custom_msgs_generate_messages custom_msgs_generate_messages_py)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/MOT.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_py _custom_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObject.msg" NAME_WE)
+add_dependencies(custom_msgs_generate_messages_py _custom_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/plyj/20240103foshan/pred_ws/src/custom_msgs/msg/DetectedObjectArray.msg" NAME_WE)
+add_dependencies(custom_msgs_generate_messages_py _custom_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(custom_msgs_genpy)
@@ -200,8 +290,14 @@ if(gencpp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cu
     DESTINATION ${gencpp_INSTALL_DIR}
   )
 endif()
+if(TARGET std_msgs_generate_messages_cpp)
+  add_dependencies(custom_msgs_generate_messages_cpp std_msgs_generate_messages_cpp)
+endif()
 if(TARGET geometry_msgs_generate_messages_cpp)
   add_dependencies(custom_msgs_generate_messages_cpp geometry_msgs_generate_messages_cpp)
+endif()
+if(TARGET jsk_recognition_msgs_generate_messages_cpp)
+  add_dependencies(custom_msgs_generate_messages_cpp jsk_recognition_msgs_generate_messages_cpp)
 endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/custom_msgs)
@@ -211,8 +307,14 @@ if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cu
     DESTINATION ${geneus_INSTALL_DIR}
   )
 endif()
+if(TARGET std_msgs_generate_messages_eus)
+  add_dependencies(custom_msgs_generate_messages_eus std_msgs_generate_messages_eus)
+endif()
 if(TARGET geometry_msgs_generate_messages_eus)
   add_dependencies(custom_msgs_generate_messages_eus geometry_msgs_generate_messages_eus)
+endif()
+if(TARGET jsk_recognition_msgs_generate_messages_eus)
+  add_dependencies(custom_msgs_generate_messages_eus jsk_recognition_msgs_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/custom_msgs)
@@ -222,8 +324,14 @@ if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/
     DESTINATION ${genlisp_INSTALL_DIR}
   )
 endif()
+if(TARGET std_msgs_generate_messages_lisp)
+  add_dependencies(custom_msgs_generate_messages_lisp std_msgs_generate_messages_lisp)
+endif()
 if(TARGET geometry_msgs_generate_messages_lisp)
   add_dependencies(custom_msgs_generate_messages_lisp geometry_msgs_generate_messages_lisp)
+endif()
+if(TARGET jsk_recognition_msgs_generate_messages_lisp)
+  add_dependencies(custom_msgs_generate_messages_lisp jsk_recognition_msgs_generate_messages_lisp)
 endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/custom_msgs)
@@ -233,8 +341,14 @@ if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_D
     DESTINATION ${gennodejs_INSTALL_DIR}
   )
 endif()
+if(TARGET std_msgs_generate_messages_nodejs)
+  add_dependencies(custom_msgs_generate_messages_nodejs std_msgs_generate_messages_nodejs)
+endif()
 if(TARGET geometry_msgs_generate_messages_nodejs)
   add_dependencies(custom_msgs_generate_messages_nodejs geometry_msgs_generate_messages_nodejs)
+endif()
+if(TARGET jsk_recognition_msgs_generate_messages_nodejs)
+  add_dependencies(custom_msgs_generate_messages_nodejs jsk_recognition_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/custom_msgs)
@@ -245,6 +359,12 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cust
     DESTINATION ${genpy_INSTALL_DIR}
   )
 endif()
+if(TARGET std_msgs_generate_messages_py)
+  add_dependencies(custom_msgs_generate_messages_py std_msgs_generate_messages_py)
+endif()
 if(TARGET geometry_msgs_generate_messages_py)
   add_dependencies(custom_msgs_generate_messages_py geometry_msgs_generate_messages_py)
+endif()
+if(TARGET jsk_recognition_msgs_generate_messages_py)
+  add_dependencies(custom_msgs_generate_messages_py jsk_recognition_msgs_generate_messages_py)
 endif()

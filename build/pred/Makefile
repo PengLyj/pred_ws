@@ -183,6 +183,21 @@ sub_MOT/fast:
 .PHONY : sub_MOT/fast
 
 # Convenience name for target.
+pred/CMakeFiles/sub_MOT2.dir/rule:
+	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pred/CMakeFiles/sub_MOT2.dir/rule
+.PHONY : pred/CMakeFiles/sub_MOT2.dir/rule
+
+# Convenience name for target.
+sub_MOT2: pred/CMakeFiles/sub_MOT2.dir/rule
+
+.PHONY : sub_MOT2
+
+# fast build rule for target.
+sub_MOT2/fast:
+	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f pred/CMakeFiles/sub_MOT2.dir/build.make pred/CMakeFiles/sub_MOT2.dir/build
+.PHONY : sub_MOT2/fast
+
+# Convenience name for target.
 pred/CMakeFiles/pub_MOT.dir/rule:
 	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pred/CMakeFiles/pub_MOT.dir/rule
 .PHONY : pred/CMakeFiles/pub_MOT.dir/rule
@@ -211,6 +226,33 @@ pred_utils: pred/CMakeFiles/pred_utils.dir/rule
 pred_utils/fast:
 	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f pred/CMakeFiles/pred_utils.dir/build.make pred/CMakeFiles/pred_utils.dir/build
 .PHONY : pred_utils/fast
+
+src/model_CVM.o: src/model_CVM.cpp.o
+
+.PHONY : src/model_CVM.o
+
+# target to build an object file
+src/model_CVM.cpp.o:
+	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f pred/CMakeFiles/pred_utils.dir/build.make pred/CMakeFiles/pred_utils.dir/src/model_CVM.cpp.o
+.PHONY : src/model_CVM.cpp.o
+
+src/model_CVM.i: src/model_CVM.cpp.i
+
+.PHONY : src/model_CVM.i
+
+# target to preprocess a source file
+src/model_CVM.cpp.i:
+	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f pred/CMakeFiles/pred_utils.dir/build.make pred/CMakeFiles/pred_utils.dir/src/model_CVM.cpp.i
+.PHONY : src/model_CVM.cpp.i
+
+src/model_CVM.s: src/model_CVM.cpp.s
+
+.PHONY : src/model_CVM.s
+
+# target to generate assembly for a file
+src/model_CVM.cpp.s:
+	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f pred/CMakeFiles/pred_utils.dir/build.make pred/CMakeFiles/pred_utils.dir/src/model_CVM.cpp.s
+.PHONY : src/model_CVM.cpp.s
 
 src/pred_utils.o: src/pred_utils.cpp.o
 
@@ -293,6 +335,33 @@ src/sub_MOT.cpp.s:
 	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f pred/CMakeFiles/sub_MOT.dir/build.make pred/CMakeFiles/sub_MOT.dir/src/sub_MOT.cpp.s
 .PHONY : src/sub_MOT.cpp.s
 
+src/sub_MOT2.o: src/sub_MOT2.cpp.o
+
+.PHONY : src/sub_MOT2.o
+
+# target to build an object file
+src/sub_MOT2.cpp.o:
+	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f pred/CMakeFiles/sub_MOT2.dir/build.make pred/CMakeFiles/sub_MOT2.dir/src/sub_MOT2.cpp.o
+.PHONY : src/sub_MOT2.cpp.o
+
+src/sub_MOT2.i: src/sub_MOT2.cpp.i
+
+.PHONY : src/sub_MOT2.i
+
+# target to preprocess a source file
+src/sub_MOT2.cpp.i:
+	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f pred/CMakeFiles/sub_MOT2.dir/build.make pred/CMakeFiles/sub_MOT2.dir/src/sub_MOT2.cpp.i
+.PHONY : src/sub_MOT2.cpp.i
+
+src/sub_MOT2.s: src/sub_MOT2.cpp.s
+
+.PHONY : src/sub_MOT2.s
+
+# target to generate assembly for a file
+src/sub_MOT2.cpp.s:
+	cd /home/plyj/20240103foshan/pred_ws/build && $(MAKE) -f pred/CMakeFiles/sub_MOT2.dir/build.make pred/CMakeFiles/sub_MOT2.dir/src/sub_MOT2.cpp.s
+.PHONY : src/sub_MOT2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -307,8 +376,12 @@ help:
 	@echo "... sub_MOT"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... sub_MOT2"
 	@echo "... pub_MOT"
 	@echo "... pred_utils"
+	@echo "... src/model_CVM.o"
+	@echo "... src/model_CVM.i"
+	@echo "... src/model_CVM.s"
 	@echo "... src/pred_utils.o"
 	@echo "... src/pred_utils.i"
 	@echo "... src/pred_utils.s"
@@ -318,6 +391,9 @@ help:
 	@echo "... src/sub_MOT.o"
 	@echo "... src/sub_MOT.i"
 	@echo "... src/sub_MOT.s"
+	@echo "... src/sub_MOT2.o"
+	@echo "... src/sub_MOT2.i"
+	@echo "... src/sub_MOT2.s"
 .PHONY : help
 
 
