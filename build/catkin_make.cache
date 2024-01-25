@@ -1,2 +1,0 @@
-custom_msgs:pred
--DCMAKE_EXPORT_COMPILE_COMMANDS=Yes -DCATKIN_DEVEL_PREFIX=/home/plyj/20240103foshan/pred_ws/devel -DCMAKE_INSTALL_PREFIX=/home/plyj/20240103foshan/pred_ws/install -G Unix Makefiles
