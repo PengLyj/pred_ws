@@ -6,6 +6,8 @@
 #include <custom_msgs/MOT.h>
 #include "custom_msgs/DetectedObject.h"
 #include "custom_msgs/DetectedObjectArray.h"
+#include "custom_msgs/TrajPredArray.h"
+#include "custom_msgs/TrajPredSingle.h"
 
 #define OBS_FRAMS 8
 #define PRED_FRAMS 12
@@ -16,7 +18,8 @@ void printTimestamp(const std_msgs::Header& header);
 //处理8帧数据为id,vector<x,y,timestamp>格式
 void processMsg(const custom_msgs::MOT& one_frame_msg, std::map<int, std::vector<std::pair<std::pair<float, float>, ros::Time>>>& bank);
 void processMsg2(const custom_msgs::DetectedObjectArray& one_frame_msg, std::map<int, std::vector<std::pair<std::pair<float, float>, ros::Time>>>& bank);
-
+void processMsg3(const custom_msgs::DetectedObjectArray& one_frame_msg, custom_msgs::TrajPredArray& bank);
+void linearInterpolationAndAppend2(custom_msgs::TrajPredArray& bank, std::size_t targetSize);
 //输入处理后8帧数据，调用预测模型输出12帧数据
 void model_CVM(std::map<int, std::vector<std::pair<std::pair<float, float>, ros::Time>>>& history_bank, 
         std::map<int, std::vector<std::pair<std::pair<float, float>, ros::Time>>>& future_bank);

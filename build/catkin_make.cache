@@ -1,0 +1,2 @@
+custom_msgs:pred
+-DCATKIN_WHITELIST_PACKAGES=pred -DCATKIN_DEVEL_PREFIX=/home/plyj/20240103foshan/pred_ws/devel -DCMAKE_INSTALL_PREFIX=/home/plyj/20240103foshan/pred_ws/install -G Unix Makefiles

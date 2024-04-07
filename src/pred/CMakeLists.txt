@@ -37,11 +37,15 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/devel/lib/)
 add_executable(pub_MOT src/pub_MOT.cpp)
 add_executable(sub_MOT src/sub_MOT.cpp)
 add_executable(sub_MOT2 src/sub_MOT2.cpp)
+add_executable(full_obs_traj src/full_obs_traj.cpp)
+
 
 
 target_link_libraries(pub_MOT  ${catkin_LIBRARIES})
 target_link_libraries(sub_MOT  ${catkin_LIBRARIES})
 target_link_libraries(sub_MOT2  ${catkin_LIBRARIES})
+target_link_libraries(full_obs_traj  ${catkin_LIBRARIES})
 target_link_libraries(sub_MOT  pred_utils)
 target_link_libraries(sub_MOT2  pred_utils)
+target_link_libraries(full_obs_traj  pred_utils)
 

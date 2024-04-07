@@ -42,6 +42,8 @@ int main(int argc, char **argv) {
             object.pose.position.y = posy;
             object.pose.position.z = 0;
             object.id = id;
+            object.angle = 0;
+            object.velocity = 0;
             object_array.objects.push_back(object);
 
             

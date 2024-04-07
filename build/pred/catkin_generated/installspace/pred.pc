@@ -1,0 +1,8 @@
+prefix=/home/plyj/20240103foshan/pred_ws/install
+
+Name: pred
+Description: Description of pred
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lpred
+Requires: roscpp rospy std_msgs

@@ -16,6 +16,8 @@ add_message_files(
     MOT.msg
     DetectedObject.msg
     DetectedObjectArray.msg
+    TrajPredSingle.msg
+    TrajPredArray.msg
     # Message2.msg
 )
 
